@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Biografie</title>
+      <link rel="icon" type="image/svg+xml" href="Fotos/F1Logo.png">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/biografie.css">
+</head>
+<body>
+
+<!-- LAMP KNOP VOOR KEYBOARD MODAL -->
+<button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+<!-- MODAL -->
+  <div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+    <div class="keyboard-modal-content">
+      <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+      <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+      <p>
+        Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+        Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+        De muis werkt altijd ook.
+      </p>
+      <small>Je kan deze melding altijd opnieuw bekijk door de lichtbol rechts boven te drukken.</small>
+    </div>
+  </div>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Fotos/F1.svg.webp" class="logo-img" alt="Logo">
+        </a>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="races.html">Races</a>
+        <a href="wins.html">Prestaties</a>
+        <a href="overmij.html">Over mij</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+</header>
+
+<main>
+<section class="bio-container">
+
+    <!-- BLOK 1 -->
+    <article class="bio-card fade-in">
+        <div class="bio-image">
+            <img src="Fotos/RBR.jpg" alt="Red Bull Racing">
+        </div>
+        <div class="bio-content">
+            <h2>Red Bull Racing</h2>
+            <p class="lead">
+                Opgericht in 2005 en uitgegroeid tot een van de meest dominante teams in de Formule 1.
+            </p>
+            <div class="extra-text">
+                <p>
+                    Red Bull Racing staat bekend om zijn agressieve strategie, technologische innovatie en talentontwikkeling.
+                    Met meerdere wereldtitels is het team een vaste kracht geworden in de sport.
+                </p>
+            </div>
+            <button class="toggle-btn">Meer lezen</button>
+        </div>
+    </article>
+
+    <!-- BLOK 2 -->
+    <article class="bio-card fade-in reverse">
+        <div class="bio-image">
+            <img src="Fotos/maxBio.jpg" alt="Max Verstappen">
+        </div>
+        <div class="bio-content">
+            <h2>Max Verstappen</h2>
+            <p class="lead">
+                De jongste wereldkampioen ooit. Bekend om zijn precisie, snelheid en mentale kracht.
+            </p>
+            <div class="extra-text">
+                <p>
+                    Max maakte zijn Formule 1-debuut op 17-jarige leeftijd en groeide razendsnel uit tot een legende in wording.
+                    Zijn rijstijl wordt gekenmerkt door controle, agressie en strategisch inzicht.
+                </p>
+            </div>
+            <button class="toggle-btn">Meer lezen</button>
+        </div>
+    </article>
+
+    <!-- BLOK 3 -->
+    <article class="bio-card fade-in">
+        <div class="bio-image">
+            <img src="Fotos/MaxAutoBio.avif" alt="RB19 – De Kampioensauto">
+        </div>
+        <div class="bio-content">
+            <h2>RB19 – De Kampioensauto</h2>
+            <p class="lead">
+                De Red Bull RB19 is een van de meest dominante Formule 1-auto’s ooit gebouwd.
+            </p>
+            <div class="extra-text">
+                <p>
+                    De RB19 combineert extreme aerodynamica, ongekende stabiliteit en brute snelheid.
+                    Met deze wagen domineerde Max Verstappen het seizoen en brak hij meerdere records.
+                    De auto wordt gezien als een technisch meesterwerk binnen de Formule 1.
+                </p>
+            </div>
+            <button class="toggle-btn">Meer lezen</button>
+        </div>
+    </article>
+
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Fotos/F1.svg.webp" alt="F1 Logo">
+        </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="teams.html">Teams</a>
+      <a href="races.html">Races</a>
+      <a href="wins.html">Prestaties</a>
+      <a href="overmij.html">Over mij</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="socials">
+        <a href="https://www.instagram.com/piersonexpo/" target="_blank">
+            <img src="Fotos/Instagram.webp" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank">
+            <img src="Fotos/Facebook.png" alt="Facebook">
+        </a>
+        <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank">
+            <img src="Fotos/icon.png" alt="X">
+        </a>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2025 Formula67
+    </div>
+</footer>
+
+<script src="Js/biografie.js"></script>
+<script src="Js/script.js"></script>
+
+</body>
+</html>

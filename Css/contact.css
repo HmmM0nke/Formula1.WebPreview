@@ -1,0 +1,96 @@
+/* CONTACT PAGINA – APARTE CSS */
+
+/* BODY OVERRIDE (optioneel) */
+body.contact-page {
+    background: #1e1e36;
+}
+
+/* HEADER – gebruikt globale style, geen wijzigingen nodig */
+
+/* Titel precies gelijk aan wrapper (zelfde totale breedte + padding) */
+body.contact-page .title {
+    display: block;
+    margin: 0 auto 25px auto;
+    background: #2a2a55;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center;
+    color: #d1d1d1;
+    border: none;
+
+    /* match wrapper size & padding */
+    width: 100%;
+    max-width: 1500px;      /* gelijk aan .contact-wrapper */
+    padding: 30px;         /* zelfde horizontale padding als wrapper */
+    box-sizing: border-box;
+    border-radius: 14px;
+}
+
+
+/* Zorg dat contact wrapper en titel exact dezelfde breedte en centrering hebben */
+body.contact-page .contact-wrapper {
+    background: #2a2a55;
+    padding: 30px;
+    border-radius: 14px;
+    box-shadow: 0px 4px 18px rgba(0,0,0,0.15);
+
+    /* centered card + vaste max-width zodat titel er precies bij past */
+    max-width: 1500px;    /* 500px form + 2 * 30px padding */
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* CONTACT FORM SPECIFIEK */
+body.contact-page .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 500px;
+    color: #d1d1d1;
+    margin: 0 auto;
+}
+
+body.contact-page .contact-form input,
+body.contact-page .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff;
+    width: 100%;
+}
+
+body.contact-page .contact-form textarea {
+    height: 160px;
+    resize: none;
+}
+
+body.contact-page .contact-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #454444;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.25s ease;
+    font-family: formula;
+    font-size: 20px;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+body.contact-page .contact-btn:hover {
+    background: #787474;
+    transform: scale(1.03);
+}
+
+/* FOOTER – gebruikt globale style, geen wijzigingen nodig */
+
+/* Keyboard focus styling */
+.keyboard-focus {
+    outline: 3px solid #AA1E36;
+    outline-offset: 3px;
+    transition: outline 0.2s ease;
+}

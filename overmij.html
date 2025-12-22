@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Over mij</title>
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/overmij.css">
+</head>
+<body class="about-page">
+
+  <!-- Lichtbol voor keyboard uitleg -->
+  <button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+  <!-- MODAL -->
+  <div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+    <div class="keyboard-modal-content">
+      <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+      <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+      <p>
+        Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+        Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+        De muis werkt altijd ook.
+      </p>
+      <small>Je kan deze melding altijd opnieuw bekijk door de lichtbol rechts boven te drukken.</small>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a>
+    </div>
+    <nav>
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <section class="about-section">
+    <div class="left-text">
+      <h1 class="title">Mijn naam is Chakib el Abbaoui,</h1>
+      <p class="about-text">
+Ik zit momenteel in A5 en heb deze website gemaakt wegens mijn nieuwschierigheid naar F1. Ik ben zelf nooit echt ingekomen in dit sport. Ik heb er veel vaker van gehoord en werd zo dus ingelicht in hoe het werkt en wat er gaande was. Toen ik de keuze kreeg om een website naar keuze te maken, strak dit sport me erg aan. Ik heb veel geleerd over de coereurs, de auto's, de races en de geschiedenis van F1. Ik ben hierdoor steeds meer geïnteresseert geraakt met dit sport, en zal er na dit project nog steeds van kunnen genieten.
+      </p>
+      <div class="contact-block">
+        <p>Vragen? Stel ze graag!</p>
+        <a href="contact.html" class="main-link" tabindex="0">Contact</a>
+      </div>
+    </div>
+    <div class="right-image">
+      <img src="Fotos/ik.jpg" alt="Foto" class="about-photo">
+    </div>
+  </section>
+
+  <section class="thanks-section">
+    <h2>Met grote dank aan,</h2>
+    <p>Khang Nguyen voor het helpen met de informatie.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo"><a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a></div>
+    <div class="footer-links">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/piersonexpo/" target="_blank" tabindex="0"><img src="Fotos/Instagram.webp" alt="Instagram"></a>
+      <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank" tabindex="0"><img src="Fotos/Facebook.png" alt="Facebook"></a>
+      <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank" tabindex="0"><img src="Fotos/icon.png" alt="X"></a>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Formula67</div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="Js/script.js"></script>
+
+</body>
+</html>

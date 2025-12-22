@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home</title>
+  <link rel="icon" type="image/svg+xml" href="Fotos/F1Logo.png">
+  <link rel="stylesheet" href="Css/style.css">
+
+</head>
+<body>
+
+  <button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+  <!-- MODAL -->
+  <div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+    <div class="keyboard-modal-content">
+      <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+      <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+      <p>
+        Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+        Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+        De muis werkt altijd ook.
+      </p>
+      <small>Je kan deze melding altijd opnieuw bekijk door de lichtbol rechts boven te drukken.</small>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a>
+    </div>
+    <nav>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+  </header>
+
+  <!-- CONTENT -->
+  <section class="section">
+    <h2 class="title">Nieuws</h2>
+
+    <div class="slider" style="position:relative; margin-top:18px;">
+      <div class="slides" style="display:flex; transition: transform 0.6s ease-in-out;">
+        <img src="Fotos/Fortnite.png" class="slide" alt="slide1">
+        <img src="Fotos/Vegas.avif" class="slide" alt="slide2">
+        <img src="Fotos/Helm.avif" class="slide" alt="slide3">
+      </div>
+      <button class="prev" tabindex="0">&#10094;</button>
+      <button class="next" tabindex="0">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Top 3</h2>
+
+    <div class="button-row">
+      <button tabindex="0">Laatste race</button>
+      <button tabindex="0">Seizoen 2025</button>
+    </div>
+
+    <div class="cards">
+      <div class="card" tabindex="0" data-href="wins.html"><img src="Fotos/LN1.png" alt="card1"></div>
+      <div class="card" tabindex="0" data-href="wins.html"><img src="Fotos/KA2.png" alt="card2"></div>
+      <div class="card" tabindex="0" data-href="wins.html"><img src="Fotos/MV3.png" alt="card3"></div>
+    </div>
+
+    <a class="main-link" href="wins.html" tabindex="0">Alle plaatsingen</a>
+  </section>
+
+  <section class="section">
+    <h2 class="title">Recente Highlights</h2>
+
+    <div class="cards">
+      <div class="video-thumb" tabindex="0" data-video="Videos/HighlightSaoPaolo.mp4"><img src="Fotos/SaoPaolo.jpg" alt="video1"></div>
+      <div class="video-thumb" tabindex="0" data-video="Videos/HighlightAzerbaijan.mp4"><img src="Fotos/Azerbaijan.jpg" alt="video2"></div>
+      <div class="video-thumb" tabindex="0" data-video="Videos/HighlightSingapore.mp4"><img src="Fotos/Singapore.jpg" alt="video3"></div>
+    </div>
+  </section>
+
+  <!-- VIDEO LIGHTBOX -->
+  <div id="videoLightbox">
+    <video id="lightboxVideo" controls></video>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Fotos/F1.svg.webp">
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="teams.html">Teams</a>
+      <a href="races.html">Races</a>
+      <a href="wins.html">Prestaties</a>
+      <a href="overmij.html">Over mij</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/piersonexpo/" target="_blank"><img src="Fotos/Instagram.webp" alt="Instagram"></a>
+      <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank"><img src="Fotos/Facebook.png" alt="Facebook"></a>
+      <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank"><img src="Fotos/icon.png" alt="X"></a>
+    </div>
+
+    <div class="footer-bottom">&copy; 2025 Formula67</div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="Js/script.js"></script>
+
+</body>
+</html>

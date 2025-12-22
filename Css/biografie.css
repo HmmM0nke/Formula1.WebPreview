@@ -1,0 +1,191 @@
+.bio-container{
+    width: 92%;
+    max-width: 1200px;
+    margin: 80px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+
+.bio-card {
+    display:flex;
+    align-items:center;
+    gap:50px;
+    padding:45px;
+    border-radius:18px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.25);
+    opacity:0;
+    transform:translateY(40px);
+    transition:0.9s ease;
+    position: relative;
+    overflow: hidden;
+
+    /* Achtergrond standaard (eerste en derde kaart) */
+    background-image: url('../Fotos/RedBullBG.jpeg');
+    
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bio-card.reverse {
+    flex-direction: row-reverse;
+
+    /* Achtergrond tweede kaart */
+    background-image: url("../Fotos/RedbullBGLinks.jpeg");
+}
+
+/* Overlay voor leesbaarheid */
+.bio-card::before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,0.35); /* lichtere overlay zodat je achtergrond ziet */
+    z-index:0;
+}
+
+/* Zorg dat inhoud boven overlay blijft */
+.bio-card > * {
+    position: relative;
+    z-index:1;
+}
+
+
+.bio-card.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+.bio-card.reverse{
+    flex-direction:row-reverse;
+}
+
+/* AFBEELDING */
+.bio-image{
+    width:45%;
+    height:320px;
+    border-radius:14px;
+    overflow:hidden;
+    border:3px solid #ffcc00;
+}
+
+.bio-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+.bio-image img:hover{
+    transform:scale(1.05);
+}
+
+/* TEKST */
+.bio-content{
+    width:55%;
+    color:white;
+}
+
+.bio-content h2{
+    font-size:34px;
+    margin-bottom:12px;
+    color:#ffcc00;
+}
+
+.bio-content .lead{
+    font-size:17px;
+    line-height:1.6;
+    margin-bottom:15px;
+    color:#eaeaea;
+}
+
+/* UITKLAPTEKST */
+.extra-text{
+    max-height:0;
+    overflow:hidden;
+    transition:0.4s ease;
+}
+
+.extra-text p{
+    margin-top:12px;
+    font-size:16px;
+    color:#ddd;
+}
+
+/* KNOP */
+.toggle-btn{
+    margin-top:22px;
+    padding:10px 26px;
+    border-radius:8px;
+    border:2px solid #ffcc00;
+    background:none;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.25s;
+}
+
+.toggle-btn:hover{
+    background:#ffcc00;
+    color:white;
+}
+
+/* RESPONSIVE */
+@media (max-width:900px){
+    .bio-card,
+    .bio-card.reverse{
+        flex-direction:column;
+    }
+
+    .bio-image,
+    .bio-content{
+        width:100%;
+    }
+}
+/* FOTO LIGHTBOX ZOOM */
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.image-lightbox.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.image-lightbox img {
+    max-width: 90%;
+    max-height: 85%;
+    border-radius: 18px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.8);
+    animation: zoomIn 0.35s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* subtiel hover-effect op bio foto */
+.bio-image img {
+    cursor: pointer;
+    transition: transform 0.25s ease;
+}
+
+.bio-image img:hover {
+    transform: scale(1.03);
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact</title>
+  <link rel="icon" type="image/svg+xml" href="Fotos/F1Logo.png">
+  <link rel="stylesheet" href="Css/style.css">
+  <link rel="stylesheet" href="Css/contact.css">
+</head>
+<body class="contact-page">
+
+  <!-- LICHTBOL VOOR KEYBOARD MODAL -->
+  <button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+  <!-- MODAL -->
+<div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+  <div class="keyboard-modal-content">
+    <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+    <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+    <p>
+      Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+      Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+      De muis werkt altijd ook.
+    </p>
+    <p style="margin-top:10px; font-style:italic; color:#0000ff;">
+      OM DINGEN IN TE KUNNEN VULLEN MET DE TOETSENBORD NAVIGATIE, KLIK EERST OP <strong>VERSTUUR</strong>.
+    </p>
+    <small>Je kan deze melding altijd opnieuw bekijken door de lichtbol rechts boven te drukken.</small>
+  </div>
+</div>
+
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a>
+    </div>
+    <nav>
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+
+  </header>
+
+  <!-- CONTENT -->
+  <section class="section">
+    <h2 class="title">Contact</h2>
+    <div class="contact-wrapper">
+      <form class="contact-form">
+        <label for="naam">Naam</label>
+        <input type="text" id="naam" name="naam" required tabindex="0">
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required tabindex="0">
+
+        <label for="bericht">Bericht</label>
+        <textarea id="bericht" name="bericht" rows="5" required tabindex="0"></textarea>
+
+        <button type="submit" class="contact-btn" tabindex="0">Verstuur</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo"><a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a></div>
+    <div class="footer-links">
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.instagram.com/piersonexpo/" target="_blank" tabindex="0"><img src="Fotos/Instagram.webp" alt="Instagram"></a>
+      <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank" tabindex="0"><img src="Fotos/Facebook.png" alt="Facebook"></a>
+      <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank" tabindex="0"><img src="Fotos/icon.png" alt="X"></a>
+    </div>
+    <div class="footer-bottom">&copy; 2025 Formula67</div>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script src="Js/script.js"></script>
+
+  <!-- Contact Form Script -->
+  <script>
+    document.querySelector(".contact-form").addEventListener("submit", async function(e) {
+      e.preventDefault();
+      const form = this;
+      const formData = {
+        naam: document.getElementById("naam").value,
+        email: document.getElementById("email").value,
+        bericht: document.getElementById("bericht").value,
+      };
+      try {
+        await fetch(
+          "https://script.google.com/macros/s/AKfycbyn1ixI2vRgMOHiA67pLkHHy3MB3IBaAr5NwbiZ48xry80JE8eEc22NhLudYpnzD4p_/exec",
+          { method: "POST", mode: "no-cors", body: JSON.stringify(formData), headers: { "Content-Type": "application/json" } }
+        );
+        alert("Bericht verzonden!");
+        form.reset();
+      } catch (err) {
+        console.error(err);
+        alert("Fout bij verzenden: " + err.message);
+      }
+    });
+    // Alleen voor contactpagina
+if(document.body.classList.contains("contact-page")){
+    const modal = document.getElementById("keyboardModal");
+    if(modal){
+        modal.style.display = "flex";
+        // Modal automatisch na 4 seconden weer verbergen
+        setTimeout(() => { modal.style.display = "none"; }, 4000);
+    }
+}
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teams</title>
+    <link rel="icon" type="image/svg+xml" href="Fotos/F1Logo.png">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/teams.css">
+</head>
+<body>
+
+<!-- LAMP KNOP VOOR KEYBOARD MODAL -->
+<button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+<!-- MODAL -->
+  <div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+    <div class="keyboard-modal-content">
+      <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+      <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+      <p>
+        Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+        Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+        De muis werkt altijd ook.
+      </p>
+      <small>Je kan deze melding altijd opnieuw bekijk door de lichtbol rechts boven te drukken.</small>
+    </div>
+  </div>
+<!-- HEADER -->
+<header>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Fotos/F1.svg.webp" class="logo-img" alt="F1 Logo">
+        </a>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="races.html">Races</a>
+        <a href="wins.html">Prestaties</a>
+        <a href="overmij.html">Over mij</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+</header>
+
+<!-- TEAMS SECTIE -->
+<section class="section">
+    <h2 class="title">F1 Teams</h2>
+
+    <div class="cards-row">
+        <a href="biografie.html" class="card team-card" tabindex="0" data-href="biografie.html">
+            <img src="Fotos/RBR.jpg" alt="Red Bull Racing">
+            <h3>Red Bull Racing</h3>
+        </a>
+        <a href="biografie.html" class="card team-card" tabindex="0" data-href="biografie.html">
+            <img src="Fotos/mc.png" alt="McLaren">
+            <h3>McLaren</h3>
+        </a>
+        <a href="biografie.html" class="card team-card" tabindex="0" data-href="biografie.html">
+            <img src="Fotos/mer.png" alt="Mercedes">
+            <h3>Mercedes</h3>
+        </a>
+    </div>
+
+    <div class="cards-row">
+        <a href="biografie.html" class="card team-card" tabindex="0" data-href="biografie.html">
+            <img src="Fotos/fer.jpg" alt="Ferrari">
+            <h3>Ferrari</h3>
+        </a>
+        <a href="biografie.html" class="card team-card" tabindex="0" data-href="biografie.html">
+            <img src="Fotos/am.jpg" alt="Aston Martin">
+            <h3>Aston Martin</h3>
+        </a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Fotos/F1.svg.webp" alt="F1 Logo">
+        </a>
+    </div>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="races.html">Races</a>
+        <a href="wins.html">Prestaties</a>
+        <a href="overmij.html">Over mij</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="socials">
+        <a href="https://www.instagram.com/piersonexpo/" target="_blank">
+            <img src="Fotos/Instagram.webp" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank">
+            <img src="Fotos/Facebook.png" alt="Facebook">
+        </a>
+        <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank">
+            <img src="Fotos/icon.png" alt="X">
+        </a>
+    </div>
+
+    <div class="footer-bottom">
+        &copy; 2025 Formula67
+    </div>
+</footer>
+
+<script src="Js/script.js"></script>
+</body>
+</html>

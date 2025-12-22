@@ -1,0 +1,112 @@
+/* RACES SPECIFIEK */
+/* Container voor navigatie en kaarten */
+.race-row-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Knoppen – NIET AANGEPAST */
+.race-btn {
+    font-size: 40px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 10px;
+    color: #ffffff;
+    
+}
+.left-btn { margin-right: 10px; }
+.right-btn { margin-left: 10px; }
+
+/* Race kaarten: dezelfde look als Top 3 */
+.race-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    /* overflow:hidden verwijderd zodat hover volledig zichtbaar is */
+}
+
+.race-card {
+    flex: 1 1 calc(33.333% - 20px);
+    color: #ffffff;
+    background: #2a2a55;
+    border-radius: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.race-card img {
+    width: 100%;
+    height: 200px; /* vaste hoogte voor alle foto's */
+    object-fit: cover;
+    display: block;
+}
+
+.race-card p {
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    font-weight: bold;
+    background: #2a2a55;
+    width: 100%;
+}
+
+.race-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+/* Map container */
+.map-container {
+    width: 100%;
+    height: 400px;
+    background: #eee;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.race-card.active {
+    border: 3px solid #AA1E36;
+    transform: scale(1.05);
+}
+.map-container {
+    display: none; /* verberg standaard */
+    width: 100%;
+    height: 400px;
+    background: #2a2a55;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map-container img {
+    max-width: 90%;
+    max-height: 90%;
+}
+.map-section {
+    display: none; /* verberg alles */
+}
+
+.map-container img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 14px;
+}
+.team-card.keyboard-focus {
+    outline: 3px solid red;
+    border-radius: 8px;
+}

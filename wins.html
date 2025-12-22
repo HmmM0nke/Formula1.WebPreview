@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wins</title>
+    <link rel="icon" type="image/svg+xml" href="Fotos/F1Logo.png">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="stylesheet" href="Css/wins.css">
+</head>
+
+<body>
+  <button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+  <!-- MODAL -->
+  <div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+    <div class="keyboard-modal-content">
+      <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+      <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+      <p>
+        Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+        Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+        De muis werkt altijd ook.
+      </p>
+      <small>Je kan deze melding altijd opnieuw bekijk door de lichtbol rechts boven te drukken.</small>
+    </div>
+  </div>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a>
+    </div>
+    <nav>
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+  </header>
+
+<!-- TOP 3 GEDEELTE BOVENAAN -->
+<section class="section">
+    <h2 class="title">Top 3</h2>
+
+   <div class="button-row">
+      <button tabindex="0">Laatste race</button>
+      <button tabindex="0">Seizoen 2025</button>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <img src="Fotos/LN1.png">
+        </div>
+
+        <div class="card">
+            <img src="Fotos/KA2.png">
+        </div>
+
+        <div class="card">
+            <img src="Fotos/MV3.png">
+        </div>
+    </div>
+</section>
+<!-- FILTERS + TABEL -->
+<section class="section">
+  <h2 class="title">Race Resultaten</h2>
+
+  <!-- FILTERS -->
+  <div class="filter-container">
+    <select id="raceSelector" size="1" tabindex="0">
+      <option value="Totaal">Totaal</option>
+      <option value="Brazilië" selected>Brazilië</option>
+      <option value="Mexico">Mexico</option>
+      <option value="Verenigde Staten">Verenigde Staten</option>
+      <option value="Singapore">Singapore</option>
+      <option value="Azerbaijan">Azerbaijan</option>
+      <option value="Italië">Italië</option>
+      <option value="Nederland">Nederland</option>
+      <option value="Hongarije">Hongarije</option>
+      <option value="België">België</option>
+    </select>
+    <button id="seasonBtn" tabindex="0">Huidige Seizoen</button>
+  </div>
+
+  <div class="table-wrapper">
+    <table id="resultTable" tabindex="0">
+      <thead>
+        <tr>
+          <th>Positie</th>
+          <th>Coureur</th>
+          <th>Team</th>
+          <th>Laps</th>
+          <th>Tijd</th>
+          <th>Punten</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr tabindex="0">
+          <td>1</td>
+          <td>Naam</td>
+          <td>Teamnaam</td>
+          <td>71</td>
+          <td>1:32:44.123</td>
+          <td>25</td>
+        </tr>
+        <tr tabindex="0">
+          <td>2</td>
+          <td>Naam</td>
+          <td>Teamnaam</td>
+          <td>71</td>
+          <td>+4.231</td>
+          <td>18</td>
+        </tr>
+        <tr tabindex="0">
+          <td>3</td>
+          <td>Naam</td>
+          <td>Teamnaam</td>
+          <td>71</td>
+          <td>+6.511</td>
+          <td>15</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<script>
+  const tableRows = document.querySelectorAll("#resultTable tbody tr");
+  let currentRow = 0;
+
+  tableRows[currentRow].focus();
+
+  document.addEventListener("keydown", (e) => {
+    // Alleen navigeren als focus op een tabel-rij ligt
+    if(document.activeElement.tagName === "TR") {
+      if(e.key === "s" || e.key === "ArrowDown") {
+        e.preventDefault();
+        currentRow = (currentRow + 1) % tableRows.length;
+        tableRows[currentRow].focus();
+      }
+      if(e.key === "w" || e.key === "ArrowUp") {
+        e.preventDefault();
+        currentRow = (currentRow - 1 + tableRows.length) % tableRows.length;
+        tableRows[currentRow].focus();
+      }
+    }
+  });
+
+  // Spatie of Enter op buttons activeren
+  const buttons = document.querySelectorAll(".filter-container button");
+  buttons.forEach(btn => {
+    btn.addEventListener("keydown", (e) => {
+      if(e.key === " " || e.key === "Enter") {
+        e.preventDefault();
+        btn.click();
+      }
+    });
+  });
+</script>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">
+      <a href="index.html">
+        <img src="Fotos/F1.svg.webp">
+      </a>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="teams.html">Teams</a>
+      <a href="races.html">Races</a>
+      <a href="wins.html">Prestaties</a>
+      <a href="overmij.html">Over mij</a>
+      <a href="contact.html">Contact</a>
+    </div>
+
+    <div class="socials">
+      <a href="https://www.instagram.com/piersonexpo/" target="_blank"><img src="Fotos/Instagram.webp" alt="Instagram"></a>
+      <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank"><img src="Fotos/Facebook.png" alt="Facebook"></a>
+      <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank"><img src="Fotos/icon.png" alt="X"></a>
+    </div>
+
+    <div class="footer-bottom">&copy; 2025 Formula67</div>
+  </footer>
+
+<script src="Js/wins.js"></script>
+
+</body>
+</html>

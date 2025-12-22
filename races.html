@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Races</title>
+<link rel="icon" type="image/svg+xml" href="Fotos/F1Logo.png">
+<link rel="stylesheet" href="Css/style.css">
+<link rel="stylesheet" href="Css/races.css">
+
+</head>
+<body>
+
+  <button id="showKeyboardModal" class="keyboard-btn" tabindex="0" aria-label="Toon toetsenbord uitleg">💡</button>
+
+  <!-- MODAL -->
+  <div id="keyboardModal" role="dialog" aria-modal="true" aria-labelledby="kbdTitle">
+    <div class="keyboard-modal-content">
+      <img src="Fotos/keyboard.jpg" alt="Keyboard uitleg" onerror="this.style.display='none'">
+      <h2 id="kbdTitle">Toetsenbord Navigatie</h2>
+      <p>
+        Gebruik <strong>W A S D</strong> om te navigeren tussen knoppen en kaarten.<br>
+        Gebruik <strong>SPATIE</strong> om te activeren (zoals een muisklik).<br><br>
+        De muis werkt altijd ook.
+      </p>
+      <small>Je kan deze melding altijd opnieuw bekijk door de lichtbol rechts boven te drukken.</small>
+    </div>
+  </div>
+  <header>
+    <div class="logo">
+      <a href="index.html" tabindex="0"><img src="Fotos/F1.svg.webp" alt="Logo"></a>
+    </div>
+    <nav>
+      <a href="index.html" tabindex="0">Home</a>
+      <a href="teams.html" tabindex="0">Teams</a>
+      <a href="races.html" tabindex="0">Races</a>
+      <a href="wins.html" tabindex="0">Prestaties</a>
+      <a href="overmij.html" tabindex="0">Over mij</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+    </nav>
+    <div style="width:120px"></div>
+  </header>
+
+<section class="section">
+    <h2 class="title">Races</h2>
+
+    <div class="race-row-container">
+        <button class="race-btn left-btn">&#10094;</button>
+
+        <div class="race-row" id="raceRow">
+            <!-- WORDT GEGENEREERD DOOR JS -->
+        </div>
+
+        <button class="race-btn right-btn">&#10095;</button>
+    </div>
+</section>
+
+
+<section class="section map-section">
+    <h2 class="title">Circuit Map</h2>
+    <div class="map-container">
+        <img id="mapImage" src="" alt="Circuit map">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="logo">
+        <a href="index.html">
+            <img src="Fotos/F1.svg.webp">
+        </a>
+    </div>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="teams.html">Teams</a>
+        <a href="races.html">Races</a>
+        <a href="wins.html">Prestaties</a>
+        <a href="overmij.html">Over mij</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+<div class="socials">
+    <a href="https://www.instagram.com/piersonexpo/" target="_blank">
+        <img src="Fotos/Instagram.webp" alt="Instagram">
+    </a>
+    <a href="https://www.facebook.com/ds.PiersonCollege.DenBosch/" target="_blank">
+        <img src="Fotos/Facebook.png" alt="Facebook">
+    </a>
+    <a href="http://kook.informatica-pierson.nl/index.php?q=" target="_blank">
+        <img src="Fotos/icon.png" alt="X">
+    </a>
+</div>
+
+    <div class="footer-bottom">
+        &copy; 2025 Formula67
+    </div>
+</footer>
+
+<script src="Js/races.js"></script>
+
+</body>
+</html>
